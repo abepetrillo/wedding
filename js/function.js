@@ -44,8 +44,8 @@ $(document).on('ready', function () {
 
     // JavaScript Document
    var today = new Date();
-   var target = new Date('09/09/2017 13:00:00'); //Enter Target date & time - MM/DD/YYYY hh:mm:ss
-   var startdate = new Date('04/1/2016'); //Enter Timer start date or Today's date - MM/DD/YYYY
+   var target = new Date('06/09/2018 13:30:00'); //Enter Target date & time - MM/DD/YYYY hh:mm:ss
+   var startdate = new Date(); //Enter Timer start date or Today's date - MM/DD/YYYY
    if ($.find('.countdown').length) {
        $('.countdown').final_countdown({
            'start': startdate.getTime() / 1000,
@@ -76,7 +76,7 @@ $(document).on('ready', function () {
        }, function () {
        });
 	}
-	
+
     $('.hamburger').on('click', function () {
         if ($('.navbar-fixed-top').css('right') == '-100px') {
             $('.navbar-fixed-top').animate({ right: '0px' }, 'slow');
@@ -165,7 +165,7 @@ $(document).on('ready', function () {
     if ($.find('.fancybox').length) {
         $('.fancybox').fancybox();
     }
-    //gallery option 2 
+    //gallery option 2
 
     if ($.find('.fancybox2').length) {
         $('.fancybox2').fancybox();
