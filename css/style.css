@@ -279,7 +279,7 @@ input, textarea {
 	background-size: cover;
 }
 .bg-home {
-	background: url(http://placehold.it/1920x1080) no-repeat center center;
+	background: url(/images/background.png) no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
