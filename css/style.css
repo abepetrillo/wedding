@@ -237,21 +237,21 @@ input, textarea {
 	top: 0px;
 }
 .bg-loveline {
-	background: url(http://placehold.it/1920x1080) no-repeat center center;
+	background: url(/images/backgrounds/holding-hands.png) no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 }
 .bg-people {
-	background: url(http://placehold.it/1920x1080) no-repeat center center;
+	background: url(/images/backgrounds/bw-river.png) no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 }
 .bg-wedding {
-	background: url(http://placehold.it/1920x1080) no-repeat center center;
+	background: url(/images/backgrounds/bw-river.png) no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -272,7 +272,7 @@ input, textarea {
 	background-size: cover;
 }
 .bg-couple {
-	background: url(http://placehold.it/1920x1080) no-repeat center center;
+	background: url(/images/backgrounds/look-at-sunset.png) no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
