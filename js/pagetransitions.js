@@ -22,7 +22,7 @@ var PageTransitions = (function () {
     function init() {
         $pages.each(function () {
             var $page = $(this);
-			
+
             $page.data('originalClassList', $page.attr('class'));
 			$(".page-top").addClass("display_none");
 			  $(".container-fluid").addClass("display_none");
@@ -35,7 +35,7 @@ $pages.eq(current).find(".page-top").removeClass("display_none");
             animationClasses: { in: 'dl-animate-in-2', out: 'dl-animate-out-2' },
             onLinkClick: function (el, ev) {
                 ev.preventDefault();
-                
+
                 if (el.hasClass("hover_active") || el.hasClass("other-menu")) {
                     return false;
                 }
@@ -104,7 +104,7 @@ $pages.eq(current).find(".page-top").removeClass("display_none");
         resetPage($outpage, $inpage);
         isAnimating = false;
 		  if(  $(".navbar-fixed-top").css('overflow-y')=='scroll'){
-					     $(".navbar-fixed-top").animate({right:'-100px'}, 'slow');
+					     $(".navbar-fixed-top").animate({right:'-130px'}, 'slow');
 						}
 			$('.gridlayout').isotope({ filter: '*' });
     }

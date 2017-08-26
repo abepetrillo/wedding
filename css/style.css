@@ -45,7 +45,6 @@ a {
 	outline: none;
 }
 input, textarea {
-	appearance: none;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	-ms-appearance: none;
@@ -1106,57 +1105,55 @@ input, textarea {
 .ver-menu .hover-menu a {
 	padding: 15px 0px !important;
 }
-.ver-menu a {
-	padding: 15px 28px !important;
-}
+
 .selected:active {
 	border-top: 4px solid #f0394d;
 }
  @media (max-width: 767px) {
-ul.timeline:before {
-	left: 40px;
-}
-ul.timeline > li {
-	margin-bottom: 0px;
-	position: relative;
-	width: 100%;
-	float: left;
-	clear: left;
-}
-ul.timeline > li > .timeline-panel {
-	width: calc(100% - 65px);
-	width: -moz-calc(100% - 65px);
-	width: -webkit-calc(100% - 65px);
-}
-ul.timeline > li > .timeline-badge {
-	left: 28px;
-	margin-left: 0;
-	top: 16px;
-}
-ul.timeline > li > .timeline-panel {
-	float: right;
-}
-ul.timeline > li > .timeline-panel:before {
-	border-left-width: 0;
-	border-right-width: 15px;
-	left: -15px;
-	right: auto;
-}
-ul.timeline > li > .timeline-panel:after {
-	border-left-width: 0;
-	border-right-width: 14px;
-	left: -14px;
-	right: auto;
-}
-.timeline > li.timeline-inverted {
-	float: left;
-	clear: left;
-	margin-top: 30px;
-	margin-bottom: 30px;
-}
-.timeline > li.timeline-inverted > .timeline-badge {
-	left: 28px;
-}
+	ul.timeline:before {
+		left: 40px;
+	}
+	ul.timeline > li {
+		margin-bottom: 0px;
+		position: relative;
+		width: 100%;
+		float: left;
+		clear: left;
+	}
+	ul.timeline > li > .timeline-panel {
+		width: calc(100% - 65px);
+		width: -moz-calc(100% - 65px);
+		width: -webkit-calc(100% - 65px);
+	}
+	ul.timeline > li > .timeline-badge {
+		left: 28px;
+		margin-left: 0;
+		top: 16px;
+	}
+	ul.timeline > li > .timeline-panel {
+		float: right;
+	}
+	ul.timeline > li > .timeline-panel:before {
+		border-left-width: 0;
+		border-right-width: 15px;
+		left: -15px;
+		right: auto;
+	}
+	ul.timeline > li > .timeline-panel:after {
+		border-left-width: 0;
+		border-right-width: 14px;
+		left: -14px;
+		right: auto;
+	}
+	.timeline > li.timeline-inverted {
+		float: left;
+		clear: left;
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	.timeline > li.timeline-inverted > .timeline-badge {
+		left: 28px;
+	}
 }
 ul.resp-tabs-list, p {
 	margin: 0px;
@@ -1469,114 +1466,105 @@ h2.resp-accordion:first-child {
 }
 }
  @media screen and (max-width: 1366px) {
-.responsive-margin {
-	margin-bottom: 20px;
-}
-.inner-data {
-	top: 27%;
-}
-.pt-page-4 .main-section-s2 {
-	overflow-y: scroll;
-}
-.responsive-margin-double {
-	margin-bottom: 40px;
-}
-.inner-data .couple-name h1, .h1 {
-	font-size: 73px;
-}
-.person-image {
-	width: 64%;
-}
-.the-couple-title {
-	padding: 0px 0px 7px;
-}
-.about-the-couple {
-	margin-top: 10px;
-}
-.the-couple {
-	width: 100%;
-	padding: 20px 48px;
-}
-.ver-menu a {
-	padding: 15px 18px !important;
-}
-.timeline > li.timeline-inverted > .timeline-badge {
-	left: -40px;
-}
-.timeline > li > .timeline-badge {
-	right: -39px;
-}
-.timeline i {
-	top: -7px;
-}
-.about-the-people {
-	margin: 0px 0px 40px;
-}
-.pt-page-5 .page-title {
-	margin-bottom: 15px;
-}
-.ceremony-detail {
-	padding: 20px;
-}
-.ceremony-detail h5 {
-	margin-bottom: 15px;
-}
-.ceremony-detail svg {
-	height: 35px;
-	width: 35px;
-}
-.ceremony-detail h4 {
-	margin-bottom: 10px;
-}
-.rsvp-button {
-	margin: 23px 0px;
-}
-.logo-box {
-	padding: 5px;
-	margin-bottom: 10px;
-}
-.the-couple-img-s2 {
-	margin: 27px 0px;
-}
-.couple-area-s2 .the-couple {
-	width: 100%;
-	padding: 13px 48px;
-}
-.resp-tabs-list li {
-	font-size: 20px;
-}
-.timeline-heading h3, .h3 {
-	font-size: 43px;
-}
-.timeline-body .tour-video {
-	height: 179px;
-}
-.the-couple-img-hover .social {
-	top: 45%;
-}
-.rsvp-button {
-	margin: 6px 0px 23px;
-}
-.rsvp {
-	margin-bottom: 20px;
-}
-.gallery-image-hover-s2 i {
-	top: 48%;
-	left: 48%;
-}
-.pt-page-8 .main-section-s2 {
-	overflow-y: scroll;
-}
-.the-couple-img-hover a {
-	padding-top: 6px;
-}
-.nav > li {
-	float: left;
-	width: 100px;
-}
- _:-ms-fullscreen, :root .navbar-nav > li {
- width: 100px;
-}
+	.responsive-margin {
+		margin-bottom: 20px;
+	}
+	.inner-data {
+		top: 27%;
+	}
+	.pt-page-4 .main-section-s2 {
+		overflow-y: scroll;
+	}
+	.responsive-margin-double {
+		margin-bottom: 40px;
+	}
+	.inner-data .couple-name h1, .h1 {
+		font-size: 73px;
+	}
+	.person-image {
+		width: 64%;
+	}
+	.the-couple-title {
+		padding: 0px 0px 7px;
+	}
+	.about-the-couple {
+		margin-top: 10px;
+	}
+	.the-couple {
+		width: 100%;
+		padding: 20px 48px;
+	}
+
+	.timeline > li.timeline-inverted > .timeline-badge {
+		left: -40px;
+	}
+	.timeline > li > .timeline-badge {
+		right: -39px;
+	}
+	.timeline i {
+		top: -7px;
+	}
+	.about-the-people {
+		margin: 0px 0px 40px;
+	}
+	.pt-page-5 .page-title {
+		margin-bottom: 15px;
+	}
+	.ceremony-detail {
+		padding: 20px;
+	}
+	.ceremony-detail h5 {
+		margin-bottom: 15px;
+	}
+	.ceremony-detail svg {
+		height: 35px;
+		width: 35px;
+	}
+	.ceremony-detail h4 {
+		margin-bottom: 10px;
+	}
+	.rsvp-button {
+		margin: 23px 0px;
+	}
+	.logo-box {
+		padding: 5px;
+		margin-bottom: 10px;
+	}
+	.the-couple-img-s2 {
+		margin: 27px 0px;
+	}
+	.couple-area-s2 .the-couple {
+		width: 100%;
+		padding: 13px 48px;
+	}
+	.resp-tabs-list li {
+		font-size: 20px;
+	}
+	.timeline-heading h3, .h3 {
+		font-size: 43px;
+	}
+	.timeline-body .tour-video {
+		height: 179px;
+	}
+	.the-couple-img-hover .social {
+		top: 45%;
+	}
+	.rsvp-button {
+		margin: 6px 0px 23px;
+	}
+	.rsvp {
+		margin-bottom: 20px;
+	}
+	.gallery-image-hover-s2 i {
+		top: 48%;
+		left: 48%;
+	}
+	.pt-page-8 .main-section-s2 {
+		overflow-y: scroll;
+	}
+	.the-couple-img-hover a {
+		padding-top: 6px;
+	}
 }
  @media screen and (max-width: 1280px) {
 .inner-data .couple-name h1, .h1 {
@@ -1639,9 +1627,9 @@ h2.resp-accordion:first-child {
 }
 #dl-menu.navbar-fixed-top {
 	position: fixed !important;
-	right: -100px;
+	right: -130px;
 	z-index: 10030 !important;
-	width: 100px !important;
+	width: 130px !important;
 	height: 100% !important;
 	overflow-y: scroll;
 	left: auto;
@@ -2642,4 +2630,12 @@ ul.timeline > li > .timeline-badge {
 	top: 41%;
 	left: 42%;
 }
+}
+
+.nav > li.accomodation i {
+	color: rgba(243, 105, 121, 0.73);
+	padding: 5px 0px;
+	margin-bottom: 6px;
+	font-size: 16px;
+	display: block;
 }

@@ -78,12 +78,12 @@ $(document).on('ready', function () {
 	}
 
     $('.hamburger').on('click', function () {
-        if ($('.navbar-fixed-top').css('right') == '-100px') {
+        if ($('.navbar-fixed-top').css('right') == '-130px') {
             $('.navbar-fixed-top').animate({ right: '0px' }, 'slow');
         }
         else {
             if ($('.navbar-fixed-top').css('overflow-y') == 'scroll') {
-                $('.navbar-fixed-top').animate({ right: '-100px' }, 'slow');
+                $('.navbar-fixed-top').animate({ right: '-130px' }, 'slow');
             }
         }
     });
@@ -97,7 +97,7 @@ $(document).on('ready', function () {
             else
             {
                 if ($('.navbar-fixed-top').css('overflow-y') == 'scroll') {
-                    $('.navbar-fixed-top').animate({ right: '-100px' }, 'slow');
+                    $('.navbar-fixed-top').animate({ right: '-130px' }, 'slow');
                 }
             }
         }
