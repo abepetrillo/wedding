@@ -243,11 +243,7 @@ input, textarea {
 	background-size: cover;
 }
 .bg-people {
-	background: url(/images/backgrounds/bw-river.png) no-repeat center center;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+	background-color: #DAB6DB;
 }
 .bg-wedding {
 	background: url(/images/backgrounds/bw-river-cropped.png) no-repeat center center;
