@@ -243,7 +243,7 @@ input, textarea {
 	background-size: cover;
 }
 .bg-people {
-	background-color: #DAB6DB;
+background-color: #DAB6DB;
 }
 .bg-wedding {
 	background: url(/images/backgrounds/bw-river-cropped.png) no-repeat center center;
@@ -1393,6 +1393,7 @@ h2.resp-accordion:first-child {
 .pt-page-4 .main-section-s2 {
 	overflow-y: auto;
 }
+
 .pt-page-5 .main-section-s2 {
 	overflow-y: auto;
 }
@@ -2634,4 +2635,18 @@ ul.timeline > li > .timeline-badge {
 	margin-bottom: 6px;
 	font-size: 16px;
 	display: block;
+}
+
+.container.collage {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 36px;
+}
+
+.container.collage img {
+	padding: 10px;
+	background-color: #fff;
+	margin: 10px;
+	flex-grow: 1;
 }
