@@ -699,6 +699,47 @@ background-color: #DAB6DB;
 .timeline-body .tour-video {
 	height: 385px;
 }
+.hotels-body {
+	color: #000;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+}
+.hotels-body .hotel-container {
+	flex-grow: 1;
+	padding: 10px;
+	text-align: left;
+	justify-content: flex-start;
+	padding: 10px;
+}
+
+.hotels-body .hotel-container p {
+	text-align: left;
+	width: 90%;
+}
+
+.hotels-body .hotel-container ul {
+	width: 90%;
+	margin-left: 5%;
+}
+
+.hotels-body .hotel-container > img {
+	width: 90%;
+	height: 450px;
+	margin-bottom: 20px;
+}
+.hotels-body .hotel-container .img-cropper {
+	overflow: hidden;
+	height: 450px;
+	width: 90%;
+	margin-bottom: 20px;
+}
+
+.hotels-body .hotel-container .img-cropper img {
+	margin-top: -50px;
+	width: 100%;
+}
+
 .ceremony-detail svg {
 	height: 48px;
 	width: 48px;
