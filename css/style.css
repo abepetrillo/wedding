@@ -727,7 +727,9 @@ background-color: #DAB6DB;
 	width: 90%;
 	height: 450px;
 	margin-bottom: 20px;
+	box-sizing: border-box;
 }
+
 .hotels-body .hotel-container .img-cropper {
 	overflow: hidden;
 	height: 450px;
@@ -738,6 +740,7 @@ background-color: #DAB6DB;
 .hotels-body .hotel-container .img-cropper img {
 	margin-top: -50px;
 	width: 100%;
+	box-sizing: border-box;
 }
 
 .ceremony-detail svg {
