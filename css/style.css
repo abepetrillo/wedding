@@ -743,11 +743,25 @@ background-color: #DAB6DB;
 	box-sizing: border-box;
 }
 
+ul.attraction-list {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+}
+
+ul.attraction-list li {
+	width: calc(100% * (1/3));
+	min-height: 150px;
+	text-align: center;
+}
+
 .ceremony-detail svg {
 	height: 48px;
 	width: 48px;
 	fill: #26c7d2;
 }
+
 .gallery-image-hover {
 	width: 100%;
 	height: 100%;
@@ -764,9 +778,11 @@ background-color: #DAB6DB;
 	-ms-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
 }
+
 .grid-item:hover .gallery-image-hover {
 	opacity: 1;
 }
+
 .gallery-image-hover i {
 	position: absolute;
 	top: 48%;
