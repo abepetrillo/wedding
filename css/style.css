@@ -770,6 +770,7 @@ ul.attraction-list li a {
 
 ul.attraction-list li.bunratty {
 	background-image: url('/images/attractions/bunratty.png');
+	background-position-y: -90px;
 	background-size: cover;
 }
 ul.attraction-list li.burren {
