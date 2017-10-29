@@ -699,12 +699,14 @@ background-color: #DAB6DB;
 .timeline-body .tour-video {
 	height: 385px;
 }
+
 .hotels-body {
 	color: #000;
 	display: flex;
 	justify-content: space-around;
 	align-items: flex-start;
 }
+
 .hotels-body .hotel-container {
 	flex-grow: 1;
 	padding: 10px;
@@ -721,6 +723,10 @@ background-color: #DAB6DB;
 .hotels-body .hotel-container ul {
 	width: 90%;
 	margin-left: 5%;
+}
+
+.hotels-body .hotel-container h3 {
+	text-align: center;
 }
 
 .hotels-body .hotel-container > img {
