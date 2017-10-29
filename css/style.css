@@ -771,13 +771,23 @@ background-color: #DAB6DB;
 }
 
 .hotels-body .hotel-container p {
-	text-align: left;
 	width: 90%;
+	align-self: center;
+	margin: 10px auto 0 auto;
 }
 
 .hotels-body .hotel-container ul {
 	width: 90%;
-	margin-left: 5%;
+	align-self: center;
+	margin: 10px auto 0 auto;
+}
+
+.hotels-body .hotel-container ul li {
+	align-self: center;
+	margin: 10px auto 0 auto;
+	display: flex;
+	width: auto;
+	text-align: center;
 }
 
 .hotels-body .hotel-container h3 {
