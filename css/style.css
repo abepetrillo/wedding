@@ -732,7 +732,7 @@ background-color: #DAB6DB;
 
 .hotels-body .hotel-container .img-cropper {
 	overflow: hidden;
-	height: 450px;
+	height: 400px;
 	width: 90%;
 	margin-bottom: 20px;
 }
