@@ -51,9 +51,6 @@ $pages.eq(current).find(".page-top").removeClass("display_none");
                 nextPage(el.data('animation') - 1);
             }
         });
-
-
-
     }
 
     function nextPage(options) {
