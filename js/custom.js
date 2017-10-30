@@ -1026,21 +1026,49 @@ return index;
 
 
 map = {
-  initMaps: function(){
-    $('#reception-map').css('display', 'block')
-    var reception = new GMaps({
-        div: '#reception-map',
+  initCeremonyMap: function(){
+    var ceremony = new GMaps({
+        div: '#ceremony-map',
         lat: 52.713639,
         lng: -8.501139
       });
+      ceremony.addMarker({
+        lat:  52.713639,
+        lng: -8.501139,
+        title: 'Ceremony'
+      });
+    return ceremony;
+  },
+  initReceptionMap: function(){
+    var reception = new GMaps({
+        div: '#reception-map',
+        lat: 52.783048,
+        lng: -8.905636
+      });
+      reception.addMarker({
+        lat: 52.783048,
+        lng: -8.905636,
+        title: 'Reception'
+      });
+    return reception;
   }
 }
 
-const divEl = $('#reception-map');
+const divEl = $('#ceremony-map');
+const receptionElement = $('#reception-map');
 
-const ro = new ResizeObserver(() => {
+const co = new ResizeObserver(() => {
     if (divEl.is(':visible')) {
-      map.initMaps()
+      map.initCeremonyMap()
     }
 });
-ro.observe(divEl[0]);
+
+const ro = new ResizeObserver(() =>{
+  if (receptionElement.is(':visible')) {
+    map.initReceptionMap()
+  }
+})
+
+
+co.observe(divEl[0]);
+ro.observe(receptionElement[0]);
