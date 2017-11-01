@@ -803,7 +803,7 @@ background-color: #DAB6DB;
 
 .hotels-body .hotel-container .img-cropper {
 	overflow: hidden;
-	height: 400px;
+	height: 320px;
 	width: 90%;
 	margin-bottom: 20px;
 	display: flex;
