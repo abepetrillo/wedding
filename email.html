@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+
+  <style type="text/css">
+		.emailImage{
+			height:auto !important;
+			max-width:600px !important;
+			width:100% !important;
+			margin:auto;
+			text-align:center;
+		}
+</style></head>
+  <body>
+    <div style="width:100%;text-align:center;">
+      <a href="https://abeandsusan.com">
+        <img src="https://abeandsusan.com/images/save-the-date.png"
+        alt="" class="emailImage" /></a>
+      </div>
+    </body>
+    <script>
+    let data = ""
+    function toDataURL(src, callback, outputFormat) {
+  var img = new Image();
+  img.crossOrigin = 'Anonymous';
+  img.onload = function() {
+    var canvas = document.createElement('CANVAS');
+    var ctx = canvas.getContext('2d');
+    var dataURL;
+    canvas.height = this.naturalHeight;
+    canvas.width = this.naturalWidth;
+    ctx.drawImage(this, 0, 0);
+    dataURL = canvas.toDataURL(outputFormat);
+    callback(dataURL);
+  };
+  img.src = src;
+  if (img.complete || img.complete === undefined) {
+    img.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
+    img.src = src;
+  }
+}
+
+toDataURL(
+  'https://abeandsusan.com/images/save-the-date.png',
+  function(dataUrl) {
+    console.log('RESULT:', dataUrl)
+    data = dataUrl
+  }
+)
+</script>
+</html>
