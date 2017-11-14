@@ -943,6 +943,9 @@ ul.attraction-list li.foynes {
 	font-size: 16px;
 	text-align: left;
 }
+.timeline-body > p {
+	margin-bottom: 10px;
+}
 .timeline-footer {
 	padding: 5px 15px;
 	background-color: #f4f4f4;
