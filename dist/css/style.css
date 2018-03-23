@@ -2884,6 +2884,19 @@ ul.timeline > li > .timeline-badge {
 	display: block;
 }
 
+.nav > li.rsvp {
+	width: auto;
+}
+
+.nav > li.rsvp svg {
+	color: rgba(243, 105, 121, 0.73);
+	padding: 2px 0px;
+	margin-top: 1px;
+	margin-bottom: 9px;
+	font-size: 16px;
+	display: block;
+}
+
 .container.collage {
 	display: flex;
 	flex-direction: row;
