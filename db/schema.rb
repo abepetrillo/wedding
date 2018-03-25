@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180323013543) do
+ActiveRecord::Schema.define(version: 20180325153505) do
 
   create_table "guests", force: :cascade do |t|
     t.string "name"
     t.integer "invitation_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "rsvp_status", default: "no_response"
     t.index ["invitation_id"], name: "index_guests_on_invitation_id"
   end
 

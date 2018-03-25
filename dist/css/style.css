@@ -44,7 +44,7 @@ a {
 *:focus {
 	outline: none;
 }
-input, textarea {
+input:not(type=checkbox), textarea {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	-ms-appearance: none;
@@ -1115,6 +1115,15 @@ ul.attraction-list li.foynes {
 	margin: 0px;
 	font-size: 18px;
 }
+
+.table.rsvp-response th, #rsvpDetails label {
+	color: #000;
+}
+
+.table.rsvp-response input[type=checkbox]{
+	margin-left: 20px;
+}
+
 .fancybox-lock .fancybox-overlay {
 	overflow: auto;
 	overflow-y: scroll;

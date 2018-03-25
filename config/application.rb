@@ -25,7 +25,7 @@ module Wedding
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins 'http://localhost:8000', '*.abeandsusan.com'
-        resource '*', :headers => :any, :methods => [:get, :post, :options]
+        resource '*', :headers => :any, :methods => [:get, :post, :options, :put]
       end
     end
 

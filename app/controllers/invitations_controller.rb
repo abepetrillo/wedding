@@ -1,13 +1,44 @@
 class InvitationsController < ApplicationController
+
+  def show
+    if invitation
+      json = {invitation: {
+        code: invitation.code,
+        guests: invitation.guests.map {|g|
+          {
+            id: g.id,
+            name: g.name,
+            rsvp_status: g.rsvp_status
+          }
+        }
+      }}
+      render json: json, status: 200
+    else
+      render json: {error: 'Not authorized'}, status: :unprocessable_entity
+    end
+  end
+
   def update
     if invitation
-      render json: {status: :ok}, status: 200
+      guests = invitation_params[:guests].map do |guest|
+        invitation.guests.find(guest[:id])
+      end.compact
+
+      if invitation.update_attributes(invitation_params.merge(guests: guests))
+        render json: {status: :ok}, status: 200
+      else
+        render json: {error: 'Not authorized'}, status: :unprocessable_entity
+      end
     else
       render json: {error: 'Not authorized'}, status: :unprocessable_entity
     end
   end
 
   private
+
+  def invitation_params
+    params.require(:invitation).permit(:note, guests: [:rsvp_status, :name, :id])
+  end
 
   def invitation
     @invitation ||= Invitation.find(decoded_auth_token[:invitation_id]) if decoded_auth_token
