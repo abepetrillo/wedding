@@ -1046,9 +1046,10 @@
                           <br>
                           <span>15 April 2018</span>
                         </p>
-                        <div id="Success" class="successalert" style=" display:none;"> <strong>Thank you</strong>. </div>
-                        <div id="Error" class="errorelert" style="display:none;"> <strong>Error occurred while sending email.</strong> Try
-                          again later. </div>
+                        <div id="Success" class="successalert" style=" display:none;"> <strong>Invitation verified</strong>. Loading RSVP form</div>
+                        <div id="Error" class="errorelert" style="display:none;">
+                          <strong>Error occurred.</strong>
+                          Use one full name written on the invite</div>
                         <form class="form floating-label text-left form-validate" name="frm" id="frm" novalidate="novalidate">
                           <div class="form-group">
                             <input type="text" class="form-control" id="Name" name="Name" required="" data-rule-minlength="2"
@@ -1063,6 +1064,9 @@
                             <button type="submit" class="hvr-sweep-to-right">SUBMIT</button>
                             <div id="loding" style="display:none; padding-left:20px;"><img src="images/ajax-loader.gif" alt="Loader"></div>
                           </div>
+                        </form>
+                        <form id="rsvpDetails" class="form floating-label text-left form-validate hidden">
+                          
                         </form>
                       </div>
                     </div>
