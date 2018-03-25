@@ -30,12 +30,10 @@ var RsvpService = {
 			var status = $(this).find('input[name=rsvpStatus]').prop('checked') ? 'coming' : 'not_coming';
 			var name = $(this).find('input[name=name]').val();
 			var id = $(this).find('input[name=id]').val();
-			var note = $(this).find('input[name=note]').val();
 			return {
 				id: id,
 				name: name,
-				rsvp_status: status,
-				note: note
+				rsvp_status: status
 			}
 		}));
 	}
@@ -43,7 +41,6 @@ var RsvpService = {
 
 (function ($) {
 	'use strict';
-
 
 	//TODO: Change this to cookie storage if we have time https://stormpath.com/blog/where-to-store-your-jwts-cookies-vs-html5-web-storage#so-whats-the-difference
 	function storeToken(token) {
@@ -54,10 +51,10 @@ var RsvpService = {
 		event.preventDefault();
 		var data = {
 			invitation: {
-				guests: RsvpService.guestData()
+				guests: RsvpService.guestData(),
+				note: $(this).find('textarea[name=note]').val()
 			}
 		}
-		console.log('loaded data', data)
 		$.ajax({
 			url: API_HOST + "/invitations/me",
 			method: 'PUT',
@@ -67,8 +64,12 @@ var RsvpService = {
 			beforeSend: function(xhr) {
 				xhr.setRequestHeader('Authorization', window.sessionStorage.accessToken);
 			}
-		}).done(function(n){
-			console.log(n)
+		}).success(function(data){
+			$('#rsvpDetails').addClass('hidden')
+			$('.response-thanks').removeClass('hidden')
+		}).fail(function(data){
+			$('#rsvpDetails').addClass('hidden')
+			$('.response-fail').removeClass('hidden')
 		})
 		return false;
 	})
