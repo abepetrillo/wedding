@@ -1,12 +1,77 @@
 /* Contact Form validations start here  */
+var API_HOST = 'http://localhost:5000'
+var RsvpService = {
+	loadRsvpForm: function loadRsvpForm() {
+		$.ajax({
+			url: API_HOST + "/invitations/me",
+			beforeSend: function(xhr) {
+				xhr.setRequestHeader('Authorization', window.sessionStorage.accessToken);
+			}
+		}).done(function(data){
+			$('table.rsvp-response tr.guest-template').not('.hidden').remove()
+			$('#frm').addClass('hidden')
+		 	var rsvpForm = $('#rsvpDetails')
+			rsvpForm.removeClass('hidden')
+			var template = $('#rsvpDetails tr.guest-template')
+			var container = rsvpForm.find('.guests-container')
+			data.invitation.guests.map(function(guest){
+				var domElement = template.clone()
+				domElement.removeClass('hidden')
+				domElement.find('input[name=rsvpStatus]').prop('checked', guest.rsvp_status == 'coming')
+				domElement.find('input[name=name]').val(guest.name)
+				domElement.find('input[name=id]').val(guest.id)
+				container.append(domElement)
+			});
+		})
+	},
+	guestData: function guestData () {
+		var guestRows = $('table.rsvp-response tr.guest-template').not('.hidden');
+		return $.makeArray(guestRows.map(function(index){
+			var status = $(this).find('input[name=rsvpStatus]').prop('checked') ? 'coming' : 'not_coming';
+			var name = $(this).find('input[name=name]').val();
+			var id = $(this).find('input[name=id]').val();
+			var note = $(this).find('input[name=note]').val();
+			return {
+				id: id,
+				name: name,
+				rsvp_status: status,
+				note: note
+			}
+		}));
+	}
+};
+
 (function ($) {
 	'use strict';
-	var API_HOST = 'http://localhost:5000'
+
 
 	//TODO: Change this to cookie storage if we have time https://stormpath.com/blog/where-to-store-your-jwts-cookies-vs-html5-web-storage#so-whats-the-difference
 	function storeToken(token) {
 	  window.sessionStorage.accessToken = token;
 	}
+
+	$('#rsvpDetails').submit(function(event){
+		event.preventDefault();
+		var data = {
+			invitation: {
+				guests: RsvpService.guestData()
+			}
+		}
+		console.log('loaded data', data)
+		$.ajax({
+			url: API_HOST + "/invitations/me",
+			method: 'PUT',
+			dataType: 'json',
+			data: JSON.stringify(data),
+			contentType : 'application/json',
+			beforeSend: function(xhr) {
+				xhr.setRequestHeader('Authorization', window.sessionStorage.accessToken);
+			}
+		}).done(function(n){
+			console.log(n)
+		})
+		return false;
+	})
 
 	$( "#frm" ).submit(function( event ) {
 	  	event.preventDefault();
@@ -23,15 +88,14 @@
 				 setTimeout(function() {
 							 $( "#Error").slideUp( "slow" );
 					 }, 3000);
-			}).done(function( data ) {
+			}).success(function( data ) {
 					storeToken(data['auth_token'])
 			    $( "#loding").hide();
 			    $( "#Success").slideDown( "slow" );
-
-	    		setTimeout(function() {
+					setTimeout(function() {
 	            	$( "#Success").slideUp( "slow" );
 	        	}, 3000);
-	        $("#frm")[0].reset();
+					RsvpService.loadRsvpForm()
 		});
 	});
 })(jQuery);
