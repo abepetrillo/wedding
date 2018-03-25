@@ -21,10 +21,11 @@ class InvitationsController < ApplicationController
   def update
     if invitation
       guests = invitation_params[:guests].map do |guest|
-        invitation.guests.find(guest[:id])
+        guest_model = invitation.guests.find(guest[:id])
+        guest_model.update_attributes(guest)
       end.compact
 
-      if invitation.update_attributes(invitation_params.merge(guests: guests))
+      if invitation.update_attributes(note: invitation_params[:note])
         render json: {status: :ok}, status: 200
       else
         render json: {error: 'Not authorized'}, status: :unprocessable_entity
