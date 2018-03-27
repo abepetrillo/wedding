@@ -4,7 +4,7 @@ class InvitationsController < ApplicationController
     if invitation
       json = {invitation: {
         code: invitation.code,
-        guests: invitation.guests.map {|g|
+        guests: invitation.guests.order(:created_at).map {|g|
           {
             id: g.id,
             name: g.name,
