@@ -1049,16 +1049,15 @@
                         <div id="Success" class="successalert" style=" display:none;"> <strong>Invitation verified</strong>. Loading RSVP form</div>
                         <div id="Error" class="errorelert" style="display:none;">
                           <strong>Error occurred.</strong>
-                          Use one full name written on the invite</div>
+                          Use one full name of a guest on the invitation</div>
                         <form class="form floating-label text-left form-validate" name="frm" id="frm" novalidate="novalidate">
                           <div class="form-group">
-                            <input type="text" class="form-control" id="Name" name="Name" required="" data-rule-minlength="2"
-                              aria-required="true">
-                            <label for="Name">Name</label>
+                            <input type="text" class="form-control" id="Name" name="Name" required="" aria-required="true">
+                            <label for="Name">Name (for example Abraham Petrillo)</label>
                           </div>
 													<div class="form-group">
                             <input type="text" class="form-control" id="RsvpCode" name="RsvpCode" required="true" data-rule-number="true">
-                            <label for="Contactnumber">Guest Number</label>
+                            <label for="Contactnumber">Guest Number (for example Z43)</label>
                           </div>
                           <div class="rsvp-button text-center">
                             <button type="submit" class="hvr-sweep-to-right">SUBMIT</button>
