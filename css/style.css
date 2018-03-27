@@ -260,7 +260,7 @@ background-color: #DAB6DB;
 	background-size: cover;
 }
 .bg-rsvp {
-	background: url(http://placehold.it/1920x1080) no-repeat center center;
+	background: url(/images/backgrounds/invite.jpg) no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
