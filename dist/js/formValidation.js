@@ -1,5 +1,5 @@
 /* Contact Form validations start here  */
-var API_HOST = 'http://localhost:5000'
+var API_HOST = 'http://api.abeandsusan.com'
 var RsvpService = {
 	loadRsvpForm: function loadRsvpForm() {
 		$.ajax({
