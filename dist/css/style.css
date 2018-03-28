@@ -2924,6 +2924,7 @@ ul.timeline > li > .timeline-badge {
 
 @media all and (max-width: 500px) {
   .container.collage img {
-		margin: 10px 0px
+		margin: 10px 0px;
+		padding: 10px 0px;
 	}
 }
