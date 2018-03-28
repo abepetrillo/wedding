@@ -2922,8 +2922,13 @@ ul.timeline > li > .timeline-badge {
 	align-self: center;
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 500px) and (max-width: 400px) {
+	.container.collage {
+		flex-direction: column;
+		align-items: flex-start;
+	}
   .container.collage img {
+		width: 100%;
 		margin: 10px 0px;
 		padding: 10px 0px;
 	}
