@@ -2917,5 +2917,13 @@ ul.timeline > li > .timeline-badge {
 	padding: 10px;
 	background-color: #fff;
 	margin: 10px;
+	max-width: 100%;
 	flex-grow: 1;
+	align-self: center;
+}
+
+@media all and (max-width: 500px) {
+  .container.collage img {
+		margin: 10px 0px
+	}
 }
