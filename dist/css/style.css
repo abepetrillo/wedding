@@ -1070,6 +1070,15 @@ ul.attraction-list li.foynes {
 	width: 96%;
 }
 
+.directions p {
+	padding: 20px;
+}
+
+.directions p strong {
+	width : 100%;
+	display: inline-block;
+}
+
 .container.ceremony-section {
 	display: flex;
 	justify-content: center;
