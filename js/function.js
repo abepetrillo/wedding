@@ -42,19 +42,6 @@ $(document).on('ready', function () {
         }, 200);
     });
 
-    // JavaScript Document
-   var today = new Date();
-   var target = new Date('06/09/2018 13:30:00'); //Enter Target date & time - MM/DD/YYYY hh:mm:ss
-   var startdate = new Date(); //Enter Timer start date or Today's date - MM/DD/YYYY
-   if ($.find('.countdown').length) {
-       $('.countdown').final_countdown({
-           'start': startdate.getTime() / 1000,
-           'end': target.getTime() / 1000,
-           'now': today.getTime() / 1000
-       }, function () {
-           // Finish Callback
-       });
-   }
    $(window).load(function () {
        if ($.find('.gridlayout').length) {
            $('.gridlayout').isotope({
@@ -70,7 +57,7 @@ $(document).on('ready', function () {
    if ($.find('#example').length) {
        $('#example').countdown({
            date: '06/09/2018 13:30:00', //Enter Target date & time - MM/DD/YYYY hh:mm:ss
-           offset: (-(today.getTimezoneOffset()/60)),
+           offset: (-(new Date().getTimezoneOffset()/60)),
            day: 'Day',
            days: 'Days'
        }, function () {
@@ -284,3 +271,19 @@ document.onreadystatechange = function () {
         }, 1000);
     }
 }
+
+$(document).ready(function(){
+  // JavaScript Document
+  var today = new Date();
+  var target = new Date('06/09/2018 13:30:00'); //Enter Target date & time - MM/DD/YYYY hh:mm:ss
+  var startdate = new Date(); //Enter Timer start date or Today's date - MM/DD/YYYY
+  if ($.find('.countdown').length) {
+     $('.countdown').final_countdown({
+         'start': startdate.getTime() / 1000,
+         'end': target.getTime() / 1000,
+         'now': today.getTime() / 1000
+     }, function () {
+         // Finish Callback
+     });
+  }
+})
