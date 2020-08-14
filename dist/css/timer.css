@@ -43,7 +43,7 @@ body {
 	border-radius: 50%;
 	height: 0px;
 	padding-bottom: 100%;
-	border: solid #03c0cc;
+	/*border: solid #03c0cc;*/	
 }
 .text {
 	color: #fff;
