@@ -273,17 +273,33 @@ document.onreadystatechange = function () {
 }
 
 $(document).ready(function(){
-  // JavaScript Document
-  var today = new Date();
-  var target = new Date('06/09/2018 13:30:00'); //Enter Target date & time - MM/DD/YYYY hh:mm:ss
-  var startdate = new Date(); //Enter Timer start date or Today's date - MM/DD/YYYY
-  if ($.find('.countdown').length) {
-     $('.countdown').final_countdown({
-         'start': startdate.getTime() / 1000,
-         'end': target.getTime() / 1000,
-         'now': today.getTime() / 1000
-     }, function () {
-         // Finish Callback
-     });
+  var startDateTime = new Date(2018,5,6,13,30,0,0); // YYYY (M-1) D H m s ms (start time and date from DB)
+  var startStamp = startDateTime.getTime();
+
+  var newDate = new Date();
+  var newStamp = newDate.getTime();
+
+  var timer; // for storing the interval (to stop or pause later if needed)
+  var countdown = $('.countdown')
+
+  function updateClock() {
+      newDate = new Date();
+      newStamp = newDate.getTime();
+      var diff = Math.round((newStamp-startStamp)/1000);
+
+      var d = Math.floor(diff/(24*60*60)); /* though I hope she won't be working for consecutive days :) */
+      diff = diff-(d*24*60*60);
+      var h = Math.floor(diff/(60*60));
+      diff = diff-(h*60*60);
+      var m = Math.floor(diff/(60));
+      diff = diff-(m*60);
+      var s = diff;
+      countdown.find('.clock-days .text .val').text(d)
+      countdown.find('.clock-hours .text .val').text(h)
+      countdown.find('.clock-minutes .text .val').text(m)
+      countdown.find('.clock-seconds .text .val').text(s)
+      //document.getElementById("time-elapsed").innerHTML = d+" day(s), "+h+" hour(s), "+m+" minute(s), "+s+" second(s) working";
   }
+
+  timer = setInterval(updateClock, 1000);
 })
