@@ -287,18 +287,22 @@ $(document).ready(function(){
       newStamp = newDate.getTime();
       var diff = Math.round((newStamp-startStamp)/1000);
 
+      var y = Math.floor(diff / (356*24*60*60));
+      diff = diff-(y*356*24*60*60);
+
       var d = Math.floor(diff/(24*60*60)); /* though I hope she won't be working for consecutive days :) */
       diff = diff-(d*24*60*60);
+
       var h = Math.floor(diff/(60*60));
       diff = diff-(h*60*60);
+
       var m = Math.floor(diff/(60));
       diff = diff-(m*60);
       var s = diff;
+      countdown.find('.clock-years .text .val').text(y)
       countdown.find('.clock-days .text .val').text(d)
       countdown.find('.clock-hours .text .val').text(h)
       countdown.find('.clock-minutes .text .val').text(m)
-      countdown.find('.clock-seconds .text .val').text(s)
-      //document.getElementById("time-elapsed").innerHTML = d+" day(s), "+h+" hour(s), "+m+" minute(s), "+s+" second(s) working";
   }
 
   timer = setInterval(updateClock, 1000);
